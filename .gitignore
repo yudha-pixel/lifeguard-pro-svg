@@ -1,0 +1,4 @@
+# Ignore everything except svg folder
+*
+!svg/
+!.gitignore
