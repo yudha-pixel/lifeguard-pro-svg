@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0A0A0A; font-family: 'DM Sans', sans-serif; padding: 20px; width: 700px; }
+  .label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #E25B45; margin-bottom: 14px; }
+  .row { display: flex; gap: 16px; align-items: flex-start; }
+  .logo-card {
+    background: #161616;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-card img { display: block; }
+  .logo-card .name { font-size: 11px; color: #5f6368; text-align: center; }
+  .usage-card {
+    flex: 1;
+    background: #161616;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .usage-title { font-size: 11px; font-weight: 600; color: #B0B8C4; text-transform: uppercase; letter-spacing: 0.06em; }
+  .usage-item { display: flex; align-items: center; gap: 8px; }
+  .usage-dot { width: 6px; height: 6px; border-radius: 50%; background: #E25B45; flex-shrink: 0; }
+  .usage-text { font-size: 11px; color: #5f6368; }
+  .colors { display: flex; gap: 6px; margin-top: 4px; }
+  .color-chip { width: 20px; height: 20px; border-radius: 4px; }
+</style>
+</head>
+<body>
+  <div class="label">Brand Logos & Assets</div>
+  <div class="row">
+    <div class="logo-card">
+      <img src="../assets/lifeguard_pro_logo.png" width="90" height="90" alt="Lifeguard Pro circular logo" style="border-radius:50%">
+      <div class="name">Circular Emblem<br>assets/lifeguard_pro_logo.png</div>
+    </div>
+    <div class="logo-card" style="flex:1">
+      <img src="../assets/Lifeguard-Pro-banner.png" width="300" height="55" alt="Lifeguard Pro banner" style="object-fit:contain;border-radius:4px">
+      <div class="name">Horizontal Banner Wordmark<br>assets/Lifeguard-Pro-banner.png</div>
+    </div>
+  </div>
+  <div style="margin-top:12px">
+    <div class="usage-card">
+      <div class="usage-title">Physical Brand Colors (logos)</div>
+      <div class="colors">
+        <div class="color-chip" style="background:#CC2229" title="#CC2229 - Brand Red"></div>
+        <div class="color-chip" style="background:#1a2744" title="#1a2744 - Brand Navy"></div>
+        <div class="color-chip" style="background:#FFFFFF;border:1px solid #333" title="#FFFFFF - White"></div>
+      </div>
+      <div class="usage-item"><div class="usage-dot"></div><div class="usage-text">Red + White cross = safety/rescue identity</div></div>
+      <div class="usage-item"><div class="usage-dot"></div><div class="usage-text">Navy = professional, trust, authority</div></div>
+      <div class="usage-item"><div class="usage-dot"></div><div class="usage-text">In the sidebar: logo hosted via Google Drive URL or Odoo CDN</div></div>
+    </div>
+  </div>
+</body>
+</html>

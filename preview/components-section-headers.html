@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0A0A0A; font-family: 'DM Sans', sans-serif; padding: 20px; width: 700px; }
+  .label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #E25B45; margin-bottom: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .section-block {
+    background: #161616;
+    border-radius: 8px;
+    padding: 10px 12px 12px;
+    border: 1px solid #2a2a2a;
+  }
+  .divider-text {
+    font-size: 11px;
+    color: #2a2a2a;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+  .content-line { font-size: 12px; color: #B0B8C4; padding: 3px 0; }
+  .field-name { font-size: 10px; font-weight: 600; color: #1a2744; letter-spacing: 0.06em; text-transform: uppercase; }
+  .field-val { font-size: 12px; color: #B0B8C4; margin-top: 1px; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+  <div class="label">Section Header Pattern · ▸ SECTION + Divider</div>
+  <div class="grid">
+    <div class="section-block">
+      <div class="divider-text">___________________________</div>
+      <div class="section-title" style="color:#C63C51">▸ ACTIVITIES</div>
+      <div class="content-line">Email • May 18 • Sarah Mitchell</div>
+      <div class="content-line" style="font-size:11px;color:#5f6368">Follow up re: proposal</div>
+    </div>
+    <div class="section-block">
+      <div class="divider-text">___________________________</div>
+      <div class="section-title" style="color:#C99026">▸ NOTES</div>
+      <div style="background:#1e1e1e;border-radius:4px;padding:6px 8px;font-size:11px;color:#B0B8C4;border:1px solid #2a2a2a">Notes (Edit)</div>
+    </div>
+    <div class="section-block">
+      <div class="divider-text">___________________________</div>
+      <div class="section-title" style="color:#1a2744">▸ DEAL QUICK INFO</div>
+      <div class="field-name">STAGE (EDIT)</div>
+      <div class="field-val">Qualified Lead</div>
+      <div class="field-name">EXPECTED REVENUE</div>
+      <div class="field-val">$12,000</div>
+    </div>
+    <div class="section-block">
+      <div class="divider-text">___________________________</div>
+      <div class="section-title" style="color:#7c3f8c">▸ ADD LOG NOTE</div>
+      <div style="background:#1e1e1e;border-radius:4px;padding:6px 8px;font-size:11px;color:#B0B8C4;border:1px solid #2a2a2a">Log Note</div>
+      <div style="margin-top:8px">
+        <button style="background:#1a2744;color:#fff;border:none;border-radius:4px;padding:4px 10px;font-size:11px;font-family:'DM Sans',sans-serif;cursor:pointer">Post Log Note</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

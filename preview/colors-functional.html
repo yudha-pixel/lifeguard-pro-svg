@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=DM+Sans:wght@400;500&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0A0A0A; font-family: 'DM Sans', sans-serif; padding: 20px; width: 700px; }
+  .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+  .swatch {
+    height: 68px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 7px 8px;
+  }
+  .swatch-name { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.75); line-height: 1.2; }
+  .swatch-hex { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+  .label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #E25B45; margin-bottom: 10px; }
+  .dark .swatch-name { color: rgba(255,255,255,0.6); }
+</style>
+</head>
+<body>
+  <div class="label">Functional / Semantic Colors</div>
+  <div class="grid">
+    <div class="swatch" style="background:#1a2744">
+      <div class="swatch-name">Navy Primary</div>
+      <div class="swatch-hex">#1a2744</div>
+    </div>
+    <div class="swatch" style="background:#1A365D">
+      <div class="swatch-name">Navy Deep</div>
+      <div class="swatch-hex">#1A365D</div>
+    </div>
+    <div class="swatch" style="background:#2d4a8a">
+      <div class="swatch-name">Steel Blue</div>
+      <div class="swatch-hex">#2d4a8a</div>
+    </div>
+    <div class="swatch" style="background:#C63C51">
+      <div class="swatch-name">Activities</div>
+      <div class="swatch-hex">#C63C51</div>
+    </div>
+    <div class="swatch" style="background:#C99026">
+      <div class="swatch-name">Notes Gold</div>
+      <div class="swatch-hex">#C99026</div>
+    </div>
+    <div class="swatch" style="background:#7c3f8c">
+      <div class="swatch-name">Chatter</div>
+      <div class="swatch-hex">#7c3f8c</div>
+    </div>
+    <div class="swatch" style="background:#cc2229">
+      <div class="swatch-name">Danger</div>
+      <div class="swatch-hex">#cc2229</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0A0A0A; font-family: 'DM Sans', sans-serif; padding: 20px; width: 700px; }
+  .label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #E25B45; margin-bottom: 14px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .row-label { font-size: 10px; color: #444; width: 100%; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    white-space: nowrap;
+  }
+  .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .status-card {
+    background: #161616;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 140px;
+  }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .status-text { font-size: 12px; font-weight: 600; }
+  .status-sub { font-size: 10px; color: #5f6368; margin-top: 1px; }
+</style>
+</head>
+<body>
+  <div class="label">Badges & Status Indicators</div>
+
+  <div class="row">
+    <div class="row-label">Sheet / Pipeline Status</div>
+    <span class="badge" style="background:#1e2d1e;color:#188038">ADDED</span>
+    <span class="badge" style="background:#2d2510;color:#C99026">PENDING</span>
+    <span class="badge" style="background:#2d1010;color:#cc2229">ERROR</span>
+    <span class="badge" style="background:#1a2744;color:#DAFFDE">LOADING</span>
+    <span class="badge" style="background:#252525;color:#5f6368">IDLE</span>
+  </div>
+
+  <div class="row">
+    <div class="row-label">Boolean Fields</div>
+    <span class="badge" style="background:transparent;color:#2e7d32;border:1px solid #2e7d32"><span class="dot" style="background:#2e7d32"></span>Yes</span>
+    <span class="badge" style="background:transparent;color:#6b7280;border:1px solid #333"><span class="dot" style="background:#333"></span>No</span>
+    <span class="badge" style="background:#2d1010;color:#cc2229;border:1px solid #cc2229">DO NOT CONTACT</span>
+    <span class="badge" style="background:#2d1528;color:#C63C51;border:1px solid #C63C51">HOT</span>
+  </div>
+
+  <div class="row">
+    <div class="row-label">System Status Cards</div>
+    <div class="status-card">
+      <div class="status-dot" style="background:#cc2229;box-shadow:0 0 6px rgba(204,34,41,0.5)"></div>
+      <div>
+        <div class="status-text" style="color:#cc2229">Loading</div>
+        <div class="status-sub">Fetching CRM data…</div>
+      </div>
+    </div>
+    <div class="status-card">
+      <div class="status-dot" style="background:#5f6368"></div>
+      <div>
+        <div class="status-text" style="color:#B0B8C4">Idle</div>
+        <div class="status-sub">Last: 342ms</div>
+      </div>
+    </div>
+    <div class="status-card">
+      <div class="status-dot" style="background:#188038"></div>
+      <div>
+        <div class="status-text" style="color:#188038">Connected</div>
+        <div class="status-sub">company.odoo.com</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

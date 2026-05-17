@@ -1,0 +1,334 @@
+/**
+ * Lifeguard Pro Design System
+ * colors_and_type.css
+ *
+ * CSS Custom Properties for colors, typography, spacing, and surfaces.
+ * Designed for the 300px Gmail Sidebar viewport.
+ *
+ * FONT SUBSTITUTION NOTE:
+ *   Display font "Specimen Grotesk" (custom foundry) → substituted with "Space Grotesk" (Google Fonts).
+ *   Body font → "DM Sans" (Google Fonts).
+ *   Mono font → "JetBrains Mono" (Google Fonts).
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Brand Font — Myriad Pro (uploaded OTF)
+───────────────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MYRIADPRO-BOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Google Fonts — Body & Mono (no brand file uploaded for these)
+───────────────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ─────────────────────────────────────────────────────────────────────────
+   ROOT TOKENS
+───────────────────────────────────────────────────────────────────────── */
+:root {
+
+  /* ── SIGNATURE COLORS (PDF Design System) ── */
+  --color-obsidian:      #0A0A0A;  /* Canvas background — "the void" */
+  --color-terracotta:    #E25B45;  /* Primary accent — CTAs, brand moments */
+  --color-mint-frost:    #DAFFDE;  /* Secondary highlight — labels, success */
+
+  /* ── FUNCTIONAL COLORS (codebase) ── */
+  --color-navy-primary:  #1a2744;  /* Button fill, primary headings */
+  --color-navy-deep:     #1A365D;  /* Body text, secondary content */
+  --color-steel-blue:    #2d4a8a;  /* Team section accent */
+  --color-slate:         #415064;  /* Info/meta sections */
+  --color-danger:        #cc2229;  /* Errors, loading state */
+  --color-activities:    #C63C51;  /* Activities section header */
+  --color-notes:         #C99026;  /* Notes section header (gold) */
+  --color-chatter:       #7c3f8c;  /* Chatter Box section (purple) */
+  --color-success:       #188038;  /* Confirmed, created states */
+  --color-success-dark:  #2e7d32;  /* Boolean "Yes" indicator */
+  --color-muted:         #5f6368;  /* Hint text, captions */
+  --color-muted-alt:     #6b7280;  /* Legacy fields, subdued labels */
+
+  /* ── SURFACES ── */
+  --surface-0:           #0A0A0A;  /* Page / canvas */
+  --surface-1:           #161616;  /* Cards, panels */
+  --surface-2:           #1e1e1e;  /* Raised surfaces, hover */
+  --surface-3:           #252525;  /* Input backgrounds */
+  --border-subtle:       #2a2a2a;  /* Divider lines */
+  --border-default:      #333333;  /* Card borders */
+  --border-accent:       #404040;  /* Focused / active borders */
+
+  /* ── TEXT ── */
+  --text-primary:        #FFFFFF;  /* Headlines, primary labels */
+  --text-secondary:      #B0B8C4;  /* Body, secondary text */
+  --text-tertiary:       #6B7280;  /* Captions, hints, muted */
+  --text-inverse:        #0A0A0A;  /* Text on light backgrounds */
+  --text-terracotta:     #E25B45;  /* Branded accent text */
+  --text-mint:           #DAFFDE;  /* Mint label text */
+
+  /* ── SEMANTIC ALIASES ── */
+  --color-brand:         var(--color-terracotta);
+  --color-brand-alt:     var(--color-mint-frost);
+  --color-bg:            var(--surface-0);
+  --color-surface:       var(--surface-1);
+  --color-error:         var(--color-danger);
+  --color-warning:       var(--color-notes);
+  --color-info:          var(--color-slate);
+
+  /* ── SECTION SEMANTIC COLORS ── */
+  --section-activities:  var(--color-activities);   /* Crimson */
+  --section-notes:       var(--color-notes);        /* Gold */
+  --section-deal:        var(--color-navy-primary); /* Navy */
+  --section-team:        var(--color-steel-blue);   /* Steel Blue */
+  --section-contact:     var(--color-danger);       /* Red */
+  --section-chatter:     var(--color-chatter);      /* Purple */
+  --section-crm:         var(--color-slate);        /* Slate */
+
+  /* ─────────────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+  ─────────────────────────────────────────────────────────────────────── */
+
+  /* Font families */
+  /* NOTE: Only Myriad Pro Bold weight is available — use for display/headings only */
+  --font-display:   'Myriad Pro', 'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-body:      'DM Sans', 'Helvetica Neue', sans-serif;        /* no brand file uploaded */
+  --font-mono:      'JetBrains Mono', 'Fira Code', monospace;       /* no brand file uploaded */
+
+  /* Font weights */
+  --fw-light:       300;
+  --fw-regular:     400;
+  --fw-medium:      500;
+  --fw-semibold:    600;
+  --fw-bold:        700;
+
+  /* Font sizes — calibrated for 300px sidebar */
+  --fs-xs:          10px;
+  --fs-sm:          11px;  /* Captions, section labels */
+  --fs-base:        13px;  /* Body text, field values */
+  --fs-md:          14px;  /* Slightly elevated body */
+  --fs-lg:          16px;  /* Small headings */
+  --fs-xl:          20px;  /* Section headers */
+  --fs-2xl:         24px;  /* Card titles */
+  --fs-3xl:         32px;  /* Display headings */
+
+  /* Line heights */
+  --lh-tight:       1.2;
+  --lh-snug:        1.35;
+  --lh-normal:      1.5;
+  --lh-relaxed:     1.65;
+
+  /* Letter spacing */
+  --ls-tighter:    -0.02em;
+  --ls-tight:      -0.01em;
+  --ls-normal:      0;
+  --ls-wide:        0.04em;
+  --ls-wider:       0.08em;  /* Section labels in all-caps */
+  --ls-widest:      0.12em;
+
+  /* ─────────────────────────────────────────────────────────────────────
+     SPACING
+  ─────────────────────────────────────────────────────────────────────── */
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+
+  /* Sidebar-specific */
+  --sidebar-width:        300px;
+  --sidebar-padding-x:    16px;
+  --sidebar-padding-y:    12px;
+  --section-gap:          12px;
+
+  /* ─────────────────────────────────────────────────────────────────────
+     BORDERS & RADII
+  ─────────────────────────────────────────────────────────────────────── */
+  --radius-sm:    4px;
+  --radius-md:    6px;
+  --radius-lg:    8px;
+  --radius-xl:   12px;
+  --radius-full: 9999px;
+
+  /* ─────────────────────────────────────────────────────────────────────
+     ELEVATION / SHADOWS
+  ─────────────────────────────────────────────────────────────────────── */
+  --shadow-sm:    0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md:    0 2px 8px rgba(0,0,0,0.5);
+  --shadow-lg:    0 4px 16px rgba(0,0,0,0.6);
+  --shadow-glow-terracotta: 0 0 12px rgba(226, 91, 69, 0.3);
+  --shadow-glow-mint:       0 0 12px rgba(218, 255, 222, 0.2);
+
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   SEMANTIC ELEMENT STYLES
+───────────────────────────────────────────────────────────────────────── */
+
+/* Base reset for sidebar context */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--text-secondary);
+  background-color: var(--surface-0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Headings ── */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-tighter);
+  line-height: var(--lh-tight);
+  color: var(--text-primary);
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-tight);
+  color: var(--text-primary);
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-tight);
+  color: var(--text-primary);
+}
+
+h4, .h4 {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+/* ── Body copy ── */
+p { 
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--text-secondary);
+}
+
+small, .caption {
+  font-size: var(--fs-sm);
+  color: var(--text-tertiary);
+  line-height: var(--lh-snug);
+}
+
+/* ── Code / mono ── */
+code, pre, .mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-mint-frost);
+  background: var(--surface-2);
+  padding: 2px 5px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Section headers (the ▸ LABEL pattern) ── */
+.section-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  line-height: var(--lh-tight);
+}
+
+/* ── Field label / value pair ── */
+.field-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-navy-primary);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+}
+
+.field-value {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--color-navy-deep);
+  line-height: var(--lh-snug);
+}
+
+/* ── Buttons ── */
+.btn {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.btn:hover { opacity: 0.85; }
+.btn:active { opacity: 0.7; }
+
+.btn-primary {
+  background: var(--color-navy-primary);
+  color: #fff;
+}
+
+.btn-accent {
+  background: var(--color-terracotta);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.card-accent-top {
+  border-top: 2px solid var(--color-terracotta);
+}
+
+.card-accent-mint {
+  border-top: 2px solid var(--color-mint-frost);
+}
+
+/* ── Divider ── */
+hr, .divider {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: var(--space-3) 0;
+}
+
+/* ── Links ── */
+a {
+  color: var(--color-terracotta);
+  text-decoration: none;
+}
+a:hover { opacity: 0.8; }
