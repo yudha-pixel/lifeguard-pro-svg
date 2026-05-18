@@ -176,12 +176,12 @@ def make_svg(text: str, width: int, height: int, font_size: int,
     x="{text_x}"
     y="{text_y}"
     font-family="MyriadPro, 'Myriad Pro', Arial, sans-serif"
-    font-weight="700"
+    font-weight="900"
     font-size="{font_size}"
     fill="{WHITE}"
     dominant-baseline="middle"
     text-anchor="start"
-    letter-spacing="0.5">{text}</text>
+    letter-spacing="1">{text}</text>
 </svg>"""
 
 
@@ -190,14 +190,14 @@ def generate_all() -> None:
 
     count = 0
 
-    # Section headers — 320×40px, font 18px, red background
+    # Section headers — 640×56px @2x, font 32px, red background
     for stem, text in HEADERS:
         svg = make_svg(
             text=text,
-            width=320, height=40,
-            font_size=18,
-            text_x=10,
-            text_y=20.0,   # vertical center of 40px
+            width=640, height=56,
+            font_size=32,
+            text_x=16,
+            text_y=28.0,   # vertical center of 56px
             bg_color=RED,
         )
         out = OUT_DIR / f"{stem}.svg"
@@ -205,14 +205,14 @@ def generate_all() -> None:
         print(f"  ✓  {out.name}")
         count += 1
 
-    # Field labels — 320×24px, font 13px, red background
+    # Field labels — 640×40px @2x, font 22px, red background
     for stem, text in LABELS:
         svg = make_svg(
             text=text,
-            width=320, height=24,
-            font_size=13,
-            text_x=8,
-            text_y=12.0,   # vertical center of 24px
+            width=640, height=40,
+            font_size=22,
+            text_x=12,
+            text_y=20.0,   # vertical center of 40px
             bg_color=RED,
         )
         out = OUT_DIR / f"{stem}.svg"

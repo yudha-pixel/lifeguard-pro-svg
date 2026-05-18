@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="320" height="24"
-     viewBox="0 0 320 24">
+     width="640" height="40"
+     viewBox="0 0 640 40">
   <defs>
     <style>@font-face {
   font-family: 'MyriadPro';
@@ -17,16 +17,16 @@
     </linearGradient>
   </defs>
   <!-- background gradient strip -->
-  <rect width="320" height="24" fill="url(#bg)"/>
+  <rect width="640" height="40" fill="url(#bg)"/>
   <!-- label text -->
   <text
-    x="8"
-    y="12.0"
+    x="12"
+    y="20.0"
     font-family="MyriadPro, 'Myriad Pro', Arial, sans-serif"
-    font-weight="700"
-    font-size="13"
+    font-weight="900"
+    font-size="22"
     fill="#FFFFFF"
     dominant-baseline="middle"
     text-anchor="start"
-    letter-spacing="0.5">GOOGLE SHEET</text>
+    letter-spacing="1">GOOGLE SHEET</text>
 </svg>

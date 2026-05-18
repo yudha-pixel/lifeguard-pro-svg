@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="320" height="40"
-     viewBox="0 0 320 40">
+     width="640" height="56"
+     viewBox="0 0 640 56">
   <defs>
     <style>@font-face {
   font-family: 'MyriadPro';
@@ -17,16 +17,16 @@
     </linearGradient>
   </defs>
   <!-- background gradient strip -->
-  <rect width="320" height="40" fill="url(#bg)"/>
+  <rect width="640" height="56" fill="url(#bg)"/>
   <!-- label text -->
   <text
-    x="10"
-    y="20.0"
+    x="16"
+    y="28.0"
     font-family="MyriadPro, 'Myriad Pro', Arial, sans-serif"
-    font-weight="700"
-    font-size="18"
+    font-weight="900"
+    font-size="32"
     fill="#FFFFFF"
     dominant-baseline="middle"
     text-anchor="start"
-    letter-spacing="0.5">&#9658; DATES &amp; DEADLINES</text>
+    letter-spacing="1">&#9658; DATES &amp; DEADLINES</text>
 </svg>
