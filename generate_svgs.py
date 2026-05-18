@@ -156,7 +156,6 @@ def make_svg(text: str, width: int, height: int, font_size: int,
              text_x: int, text_y: float, bg_color: str = NAVY) -> str:
     """Return SVG markup for one asset."""
     grad_id = "bg"
-    max_text_width = width - text_x - 8  # leave 8px right margin
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -182,8 +181,6 @@ def make_svg(text: str, width: int, height: int, font_size: int,
     fill="{WHITE}"
     dominant-baseline="middle"
     text-anchor="start"
-    textLength="{max_text_width}"
-    lengthAdjust="spacingAndGlyphs"
     letter-spacing="0">{text}</text>
 </svg>"""
 
@@ -193,14 +190,14 @@ def generate_all() -> None:
 
     count = 0
 
-    # Section headers — 320×60px, font 26px, red background
+    # Section headers — 320×52px, font 22px, red background
     for stem, text in HEADERS:
         svg = make_svg(
             text=text,
-            width=320, height=60,
-            font_size=26,
+            width=320, height=52,
+            font_size=22,
             text_x=12,
-            text_y=30.0,   # vertical center of 60px
+            text_y=26.0,   # vertical center of 52px
             bg_color=RED,
         )
         out = OUT_DIR / f"{stem}.svg"
