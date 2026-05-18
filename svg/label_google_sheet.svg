@@ -28,5 +28,7 @@
     fill="#FFFFFF"
     dominant-baseline="middle"
     text-anchor="start"
-    letter-spacing="1">GOOGLE SHEET</text>
+    textLength="302"
+    lengthAdjust="spacingAndGlyphs"
+    letter-spacing="0">GOOGLE SHEET</text>
 </svg>

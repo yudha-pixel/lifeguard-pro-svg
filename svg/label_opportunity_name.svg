@@ -28,5 +28,7 @@
     fill="#FFFFFF"
     dominant-baseline="middle"
     text-anchor="start"
-    letter-spacing="1">OPPORTUNITY NAME</text>
+    textLength="302"
+    lengthAdjust="spacingAndGlyphs"
+    letter-spacing="0">OPPORTUNITY NAME</text>
 </svg>

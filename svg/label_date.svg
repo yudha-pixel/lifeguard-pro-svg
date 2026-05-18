@@ -28,5 +28,7 @@
     fill="#FFFFFF"
     dominant-baseline="middle"
     text-anchor="start"
-    letter-spacing="1">DATE</text>
+    textLength="302"
+    lengthAdjust="spacingAndGlyphs"
+    letter-spacing="0">DATE</text>
 </svg>

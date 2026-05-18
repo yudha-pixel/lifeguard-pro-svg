@@ -28,5 +28,7 @@
     fill="#FFFFFF"
     dominant-baseline="middle"
     text-anchor="start"
-    letter-spacing="1">INTERESTED IN</text>
+    textLength="302"
+    lengthAdjust="spacingAndGlyphs"
+    letter-spacing="0">INTERESTED IN</text>
 </svg>

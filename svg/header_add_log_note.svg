@@ -24,9 +24,11 @@
     y="30.0"
     font-family="MyriadPro, 'Myriad Pro', Arial, sans-serif"
     font-weight="900"
-    font-size="30"
+    font-size="26"
     fill="#FFFFFF"
     dominant-baseline="middle"
     text-anchor="start"
-    letter-spacing="1">&#9658; ADD LOG NOTE</text>
+    textLength="300"
+    lengthAdjust="spacingAndGlyphs"
+    letter-spacing="0">&#9658; ADD LOG NOTE</text>
 </svg>
