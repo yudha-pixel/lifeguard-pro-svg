@@ -38,37 +38,47 @@ WHITE     = "#FFFFFF"
 #  Labels:  320×20, no prefix, font 10px, left-padded 8px
 
 HEADERS = [
-    ("header_contact",              "&#9658; CONTACT"),
-    ("header_opportunities",        "&#9658; OPPORTUNITIES"),
-    ("header_odoo_crm",             "&#9658; ODOO CRM"),
-    ("header_form_submission",      "&#9658; FORM SUBMISSION"),
-    ("header_deal_quick_info",      "&#9658; DEAL QUICK INFO"),
-    ("header_team",                 "&#9658; TEAM"),
-    ("header_contact_quick_access", "&#9658; CONTACT QUICK-ACCESS"),
-    ("header_activities",           "&#9658; ACTIVITIES"),
-    ("header_notes",                "&#9658; NOTES"),
-    ("header_quick_add_activity",   "&#9658; QUICK ADD ACTIVITY"),
-    ("header_deal",                 "&#9658; DEAL"),
-    ("header_contact_info",         "&#9658; CONTACT INFO"),
-    ("header_dates_deadlines",      "&#9658; DATES &amp; DEADLINES"),
-    ("header_deal_details",         "&#9658; DEAL DETAILS"),
-    ("header_initial_contact",      "&#9658; INITIAL CONTACT"),
-    ("header_legacy_fields",        "&#9658; LEGACY FIELDS"),
-    ("header_add_log_note",         "&#9658; ADD LOG NOTE"),
-    ("header_conversation_timeline","&#9658; CONVERSATION TIMELINE"),
-    ("header_person",               "&#9658; PERSON"),
-    ("header_organization",         "&#9658; ORGANIZATION"),
-    ("header_create_opportunity",   "&#9658; CREATE OPPORTUNITY"),
-    ("header_create_contact",       "&#9658; CREATE CONTACT"),
-    ("header_lead_details",         "&#9658; LEAD DETAILS"),
-    ("header_contact_details",      "&#9658; CONTACT DETAILS"),
-    # FullDealTab / Organization / Contacts sections
-    ("header_header",               "&#9658; HEADER"),
-    ("header_address",              "&#9658; ADDRESS"),
-    ("header_left_column",          "&#9658; LEFT COLUMN"),
-    ("header_left_column_legacy",   "&#9658; LEFT COLUMN - LEGACY"),
-    ("header_right_column",         "&#9658; RIGHT COLUMN"),
-    ("header_organization_details", "&#9658; ORGANIZATION DETAILS"),
+    # (stem, text, bg_color)
+    # Contact group — Red
+    ("header_contact",              "&#9658; CONTACT",              "#B91C1C"),
+    ("header_contact_info",         "&#9658; CONTACT INFO",         "#B91C1C"),
+    ("header_contact_quick_access", "&#9658; CONTACT QUICK-ACCESS", "#B91C1C"),
+    ("header_contact_details",      "&#9658; CONTACT DETAILS",      "#B91C1C"),
+    ("header_create_contact",       "&#9658; CREATE CONTACT",       "#B91C1C"),
+    ("header_person",               "&#9658; PERSON",               "#B91C1C"),
+    # Opportunities / Deal group — Navy blue
+    ("header_opportunities",        "&#9658; OPPORTUNITIES",        "#1E40AF"),
+    ("header_deal",                 "&#9658; DEAL",                 "#1E40AF"),
+    ("header_deal_quick_info",      "&#9658; DEAL QUICK INFO",      "#1E40AF"),
+    ("header_deal_details",         "&#9658; DEAL DETAILS",         "#1E40AF"),
+    ("header_lead_details",         "&#9658; LEAD DETAILS",         "#1E40AF"),
+    ("header_create_opportunity",   "&#9658; CREATE OPPORTUNITY",   "#4338CA"),
+    # Activities group — Amber
+    ("header_activities",           "&#9658; ACTIVITIES",           "#B45309"),
+    ("header_quick_add_activity",   "&#9658; QUICK ADD ACTIVITY",   "#B45309"),
+    # Notes / Chatter group — Purple
+    ("header_notes",                "&#9658; NOTES",                "#6D28D9"),
+    ("header_add_log_note",         "&#9658; ADD LOG NOTE",         "#6D28D9"),
+    ("header_conversation_timeline","&#9658; CONVERSATION TIMELINE","#6D28D9"),
+    # Organization group — Teal
+    ("header_organization",         "&#9658; ORGANIZATION",         "#0F766E"),
+    ("header_organization_details", "&#9658; ORGANIZATION DETAILS", "#0F766E"),
+    # Dates / Initial Contact — Orange
+    ("header_dates_deadlines",      "&#9658; DATES &amp; DEADLINES","#C2410C"),
+    ("header_initial_contact",      "&#9658; INITIAL CONTACT",      "#C2410C"),
+    # Form Submission — Green
+    ("header_form_submission",      "&#9658; FORM SUBMISSION",      "#15803D"),
+    # Odoo CRM — Dark slate
+    ("header_odoo_crm",             "&#9658; ODOO CRM",             "#1a2744"),
+    # Team — Cyan
+    ("header_team",                 "&#9658; TEAM",                 "#0369A1"),
+    # Legacy / structural sub-headers — Gray
+    ("header_legacy_fields",        "&#9658; LEGACY FIELDS",        "#4B5563"),
+    ("header_header",               "&#9658; HEADER",               "#4B5563"),
+    ("header_address",              "&#9658; ADDRESS",              "#4B5563"),
+    ("header_left_column",          "&#9658; LEFT COLUMN",          "#4B5563"),
+    ("header_left_column_legacy",   "&#9658; LEFT COLUMN - LEGACY", "#4B5563"),
+    ("header_right_column",         "&#9658; RIGHT COLUMN",         "#4B5563"),
 ]
 
 LABELS = [
@@ -190,15 +200,15 @@ def generate_all() -> None:
 
     count = 0
 
-    # Section headers — 320×36px, font 18px, red background
-    for stem, text in HEADERS:
+    # Section headers — 320×36px, font 18px, per-section color
+    for stem, text, color in HEADERS:
         svg = make_svg(
             text=text,
             width=320, height=36,
             font_size=18,
             text_x=10,
             text_y=18.0,   # vertical center of 36px
-            bg_color=RED,
+            bg_color=color,
         )
         out = OUT_DIR / f"{stem}.svg"
         out.write_text(svg, encoding="utf-8")
