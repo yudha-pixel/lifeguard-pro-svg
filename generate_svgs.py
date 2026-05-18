@@ -190,14 +190,14 @@ def generate_all() -> None:
 
     count = 0
 
-    # Section headers — 640×56px @2x, font 32px, red background
+    # Section headers — 320×60px, font 30px, red background
     for stem, text in HEADERS:
         svg = make_svg(
             text=text,
-            width=640, height=56,
-            font_size=32,
-            text_x=16,
-            text_y=28.0,   # vertical center of 56px
+            width=320, height=60,
+            font_size=30,
+            text_x=12,
+            text_y=30.0,   # vertical center of 60px
             bg_color=RED,
         )
         out = OUT_DIR / f"{stem}.svg"
@@ -205,14 +205,14 @@ def generate_all() -> None:
         print(f"  ✓  {out.name}")
         count += 1
 
-    # Field labels — 640×40px @2x, font 22px, red background
+    # Field labels — 320×36px, font 20px, red background
     for stem, text in LABELS:
         svg = make_svg(
             text=text,
-            width=640, height=40,
-            font_size=22,
-            text_x=12,
-            text_y=20.0,   # vertical center of 40px
+            width=320, height=36,
+            font_size=20,
+            text_x=10,
+            text_y=18.0,   # vertical center of 36px
             bg_color=RED,
         )
         out = OUT_DIR / f"{stem}.svg"
