@@ -165,7 +165,7 @@ def make_svg(text: str, width: int, height: int, font_size: int,
     <style>{FONT_FACE}</style>
     <linearGradient id="{grad_id}" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"   stop-color="{bg_color}"  stop-opacity="1"/>
-      <stop offset="70%"  stop-color="{bg_color}"  stop-opacity="0.6"/>
+      <stop offset="50%"  stop-color="{bg_color}"  stop-opacity="1"/>
       <stop offset="100%" stop-color="{bg_color}"  stop-opacity="0"/>
     </linearGradient>
   </defs>
