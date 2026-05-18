@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="320" height="52"
-     viewBox="0 0 320 52">
+     width="320" height="36"
+     viewBox="0 0 320 36">
   <defs>
     <style>@font-face {
   font-family: 'MyriadPro';
@@ -17,14 +17,14 @@
     </linearGradient>
   </defs>
   <!-- background gradient strip -->
-  <rect width="320" height="52" fill="url(#bg)"/>
+  <rect width="320" height="36" fill="url(#bg)"/>
   <!-- label text -->
   <text
-    x="12"
-    y="26.0"
+    x="10"
+    y="18.0"
     font-family="MyriadPro, 'Myriad Pro', Arial, sans-serif"
     font-weight="900"
-    font-size="22"
+    font-size="18"
     fill="#FFFFFF"
     dominant-baseline="middle"
     text-anchor="start"
