@@ -29,7 +29,7 @@ FONT_FACE = f"""@font-face {{
 
 # ── Color / gradient constants ────────────────────────────────────────────────
 NAVY      = "#1a2744"
-RED       = "#cc2229"
+RED       = "#B91C1C"
 WHITE     = "#FFFFFF"
 
 # ── Asset definitions ─────────────────────────────────────────────────────────
@@ -93,7 +93,7 @@ LABELS = [
 ]
 
 DIVIDERS = [
-    ("divider_red",   "#cc2229"),  # Contact / danger sections
+    ("divider_red",   "#B91C1C"),  # Contact / danger sections
     ("divider_navy",  "#1a2744"),  # Deal sections
     ("divider_gold",  "#C99026"),  # Activities / notes
     ("divider_teal",  "#2d7d6e"),  # Organization sections
