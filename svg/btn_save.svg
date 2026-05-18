@@ -15,7 +15,7 @@
   <rect x="1.0" y="1.0"
         width="148" height="34"
         rx="4" ry="4"
-        fill="#FFFFFF" stroke="#cc2229" stroke-width="2"/>
+        fill="#FFFFFF" stroke="#EF4444" stroke-width="2"/>
   <!-- button label -->
   <text
     x="75"
@@ -23,7 +23,7 @@
     font-family="MyriadPro, 'Myriad Pro', Arial, sans-serif"
     font-weight="700"
     font-size="14"
-    fill="#cc2229"
+    fill="#EF4444"
     dominant-baseline="middle"
     text-anchor="middle"
     letter-spacing="1">SAVE</text>
