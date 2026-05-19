@@ -31,6 +31,7 @@ FONT_FACE = f"""@font-face {{
 NAVY      = "#1a2744"
 RED       = "#B91C1C"
 WHITE     = "#FFFFFF"
+PALE_BLUE = "#93C5FD"
 
 # ── Asset definitions ─────────────────────────────────────────────────────────
 #  (filename_stem, display_text, width, height, font_size, text_x, text_y)
@@ -215,7 +216,7 @@ def generate_all() -> None:
         print(f"  ✓  {out.name}")
         count += 1
 
-    # Field labels — 320×22px, font 13px, red background
+    # Field labels — 320×22px, font 13px, pale blue background
     for stem, text in LABELS:
         svg = make_svg(
             text=text,
@@ -223,7 +224,7 @@ def generate_all() -> None:
             font_size=13,
             text_x=8,
             text_y=11.0,   # vertical center of 22px
-            bg_color=RED,
+            bg_color=PALE_BLUE,
         )
         out = OUT_DIR / f"{stem}.svg"
         out.write_text(svg, encoding="utf-8")
