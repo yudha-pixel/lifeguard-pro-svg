@@ -60,6 +60,7 @@ HEADERS = [
     # Notes / Chatter group — Purple
     ("header_notes",                "&#9658; NOTES",                "#6D28D9"),
     ("header_add_log_note",         "&#9658; ADD LOG NOTE",         "#6D28D9"),
+    ("header_quick_chatter",        "&#9658; QUICK CHATTER",        "#6D28D9"),
     ("header_conversation_timeline","&#9658; CONVERSATION TIMELINE","#6D28D9"),
     # Organization group — Teal
     ("header_organization",         "&#9658; ORGANIZATION",         "#0F766E"),
