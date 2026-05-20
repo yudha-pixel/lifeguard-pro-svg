@@ -81,6 +81,11 @@ HEADERS = [
     ("header_left_column",          "&#9658; LEFT COLUMN",          "#4B5563"),
     ("header_left_column_legacy",   "&#9658; LEFT COLUMN - LEGACY", "#4B5563"),
     ("header_right_column",         "&#9658; RIGHT COLUMN",         "#4B5563"),
+    # Related Contacts — Red (same family as Contact sections)
+    ("header_related_contacts",         "&#9658; RELATED CONTACTS",         "#B91C1C"),
+    ("header_create_related_contacts",  "&#9658; CREATE RELATED CONTACTS",  "#B91C1C"),
+    # Company Contacts — Red (same family as Contact sections)
+    ("header_company_contacts",         "&#9658; COMPANY CONTACTS",         "#B91C1C"),
 ]
 
 LABELS = [
@@ -105,12 +110,15 @@ LABELS = [
 ]
 
 DIVIDERS = [
-    ("divider_red",   "#B91C1C"),  # Contact / danger sections
-    ("divider_navy",  "#1a2744"),  # Deal sections
-    ("divider_gold",  "#C99026"),  # Activities / notes
-    ("divider_teal",  "#2d7d6e"),  # Organization sections
-    ("divider_pink",  "#D95A8A"),  # Person / contact sections
-    ("divider_gray",  "#6b7280"),  # Legacy fields
+    ("divider_red",      "#B91C1C"),  # Contact / danger sections
+    ("divider_navy",     "#1a2744"),  # Deal sections
+    ("divider_gold",     "#C99026"),  # Activities / notes
+    ("divider_teal",     "#2d7d6e"),  # Organization sections
+    ("divider_pink",     "#D95A8A"),  # Person / contact sections
+    ("divider_gray",     "#6b7280"),  # Legacy fields
+    ("divider_purple",   "#6D28D9"),  # Notes / chatter sections
+    ("divider_amber",    "#B45309"),  # Activities sections
+    ("divider_blue",     "#1E40AF"),  # Opportunity sections
 ]
 
 BUTTONS = [
@@ -197,6 +205,12 @@ def make_svg(text: str, width: int, height: int, font_size: int,
 </svg>"""
 
 
+def to_camel(stem: str) -> str:
+    """Convert snake_case stem to camelCase filename (e.g. header_related_contacts → headerRelatedContacts)."""
+    parts = stem.split('_')
+    return parts[0] + ''.join(p.capitalize() for p in parts[1:])
+
+
 def generate_all() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -212,9 +226,9 @@ def generate_all() -> None:
             text_y=18.0,   # vertical center of 36px
             bg_color=color,
         )
-        out = OUT_DIR / f"{stem}.svg"
+        out = OUT_DIR / f"{to_camel(stem)}.svg"
         out.write_text(svg, encoding="utf-8")
-        print(f"  ✓  {out.name}")
+        print(f"  OK  {out.name}")
         count += 1
 
     # Field labels — 320×22px, font 13px, pale blue background
@@ -227,25 +241,25 @@ def generate_all() -> None:
             text_y=11.0,   # vertical center of 22px
             bg_color=PALE_BLUE,
         )
-        out = OUT_DIR / f"{stem}.svg"
+        out = OUT_DIR / f"{to_camel(stem)}.svg"
         out.write_text(svg, encoding="utf-8")
-        print(f"  ✓  {out.name}")
+        print(f"  OK  {out.name}")
         count += 1
 
     # Divider lines — 320×4px, solid color, no text
     for stem, color in DIVIDERS:
         svg = make_divider_svg(color=color)
-        out = OUT_DIR / f"{stem}.svg"
+        out = OUT_DIR / f"{to_camel(stem)}.svg"
         out.write_text(svg, encoding="utf-8")
-        print(f"  ✓  {out.name}")
+        print(f"  OK  {out.name}")
         count += 1
 
     # Action buttons — 150×36px, white bg, red border + text
     for stem, text in BUTTONS:
         svg = make_button_svg(text=text)
-        out = OUT_DIR / f"{stem}.svg"
+        out = OUT_DIR / f"{to_camel(stem)}.svg"
         out.write_text(svg, encoding="utf-8")
-        print(f"  ✓  {out.name}")
+        print(f"  OK  {out.name}")
         count += 1
 
     print(f"\nDone — {count} SVG files written to: {OUT_DIR}")
