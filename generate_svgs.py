@@ -119,6 +119,10 @@ DIVIDERS = [
     ("divider_purple",   "#6D28D9"),  # Notes / chatter sections
     ("divider_amber",    "#B45309"),  # Activities sections
     ("divider_blue",     "#1E40AF"),  # Opportunity sections
+    ("divider_indigo",   "#4338CA"),  # Create Opportunity
+    ("divider_orange",   "#C2410C"),  # Dates & Deadlines / Initial Contact
+    ("divider_green",    "#15803D"),  # Form Submission
+    ("divider_cyan",     "#0369A1"),  # Team
 ]
 
 BUTTONS = [
