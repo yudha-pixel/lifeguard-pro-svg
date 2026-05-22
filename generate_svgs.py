@@ -49,7 +49,6 @@ HEADERS = [
     ("header_quick_chatter", "&#9658; QUICK CHATTER", RED),
     ("header_conversation_timeline", "&#9658; CONVERSATION TIMELINE", NAVY),
     ("header_organization", "&#9658; ORGANIZATION", NAVY),
-    ("header_what_is_company_section_for", "&#9658; WHAT IS COMPANY SECTION FOR", RED),
     ("header_organization_details", "&#9658; ORGANIZATION DETAILS", RED),
     ("header_dates_deadlines", "&#9658; DATES &amp; DEADLINES", NAVY),
     ("header_initial_contact", "&#9658; INITIAL CONTACT", NAVY),
@@ -70,7 +69,6 @@ HEADERS = [
     ("header_confirm", "&#9658; CONFIRM", RED),
     ("header_message", "&#9658; MESSAGE", RED),
     ("header_people", "&#9658; PEOPLE", RED),
-    ("header_what_is_people_section_for", "&#9658; WHAT IS PEOPLE SECTION FOR", RED),
     ("header_quick_fix", "&#9658; QUICK FIX", NAVY),
     ("header_select_existing_company", "&#9658; SELECT EXISTING COMPANY", RED),
     ("header_add_new_contact_to_company", "&#9658; + ADD NEW CONTACT TO COMPANY", RED),
@@ -220,7 +218,12 @@ def generate_all() -> None:
     for stem, text in LABELS:
         count += write_svg(
             f"{to_camel(stem)}.svg",
-            make_svg(text=text, width=320, height=22, font_size=13, text_x=8, text_y=11.0, bg_color=PALE_BLUE),
+            make_svg(text=text, width=320, height=22, font_size=13, text_x=8, text_y=11.0, bg_color=NAVY),
+        )
+        count += write_tone_variants(
+            stem,
+            text,
+            lambda value, tone_color: make_svg(value, 320, 22, 13, 8, 11.0, tone_color),
         )
 
     for stem, text in SUBTITLES:
